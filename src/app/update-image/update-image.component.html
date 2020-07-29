@@ -1,0 +1,14 @@
+<h1 mat-dialog-title>Update Image</h1>
+<div mat-dialog-content>
+  <form (submit)= "fileUploadHandler($event)" ngNativeValidate>
+    <div>
+    <input type="file" style="padding: 10px" (change)="fileUpload($event)" required/>
+  </div>
+  <br />
+    <button mat-raised-button type="submit" style="float: right" color="primary">update</button>
+  </form>
+</div>
+<!-- <div mat-dialog-actions>
+  <button mat-button mat-dialog-close>Close</button>
+  <button mat-raised-button>click</button>
+</div> -->

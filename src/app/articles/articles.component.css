@@ -1,0 +1,65 @@
+/* 
+  .flex-container {
+    padding: 0;
+  margin: 0;
+  list-style: none;
+  -ms-box-orient: horizontal;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: flex;
+  }
+  .flex-container > div {
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin: 10px;
+  }
+  .example-card {
+    max-width: 400px;
+  }
+  
+  .example-header-image {
+    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+    background-size: cover;
+  }
+   */
+   .flex-container {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    -ms-box-orient: horizontal;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -moz-flex;
+    display: -webkit-flex;
+    display: flex;
+  }
+  
+  .wrap { 
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }  
+  
+  .example-card {
+    /* background: tomato;
+    padding: 4%; */
+    width: 280px;
+    margin: 10px;
+  }
+  
+  @media (max-width: 480px) {
+    .example-card {
+        /* background: tomato;
+        padding: 4%; */
+        width: 100%;
+        margin: 10px;
+      } 
+  }
+  .centered {
+    position: fixed; /* or absolute */
+    top: 45%;
+    left: 45%;
+  }

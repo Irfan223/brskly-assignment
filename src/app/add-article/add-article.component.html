@@ -1,0 +1,18 @@
+
+<h1 mat-dialog-title>Add New Article</h1>
+<div mat-dialog-content>
+    <form (submit)= "fileUploadHandler($event)" ngNativeValidate>
+      <div>
+        <input  type="file" style="padding: 10px; width: 96%" (change)="fileUpload($event)" required/>
+      </div>
+      <br />
+      <div>
+       <textarea [(ngModel)]='article.description' name="description" rows="10" style="width: 100%" required></textarea>
+      </div>
+      <button mat-raised-button type="submit" style="float: right" color="primary">Add Article</button>
+  </form>
+</div>
+<div mat-dialog-actions>
+  <!-- <button mat-button mat-dialog-close>Close</button>
+  <button mat-raised-button>upload</button> -->
+</div>

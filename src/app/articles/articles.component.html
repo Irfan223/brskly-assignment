@@ -1,0 +1,28 @@
+
+  <button mat-raised-button style="float: right;" color="primary" (click)="addNewArticle()">Add New Article</button>
+  <br />
+  <br />
+  <br />
+  <!-- <hr /> -->
+  <ng-container *ngIf="data.length != 0; else loading">
+  <div class="flex-container wrap">
+    <mat-card class="example-card" *ngFor="let img of data">
+        <!-- <mat-card-header>
+          <div mat-card-avatar class="example-header-image"></div>
+        </mat-card-header> -->
+        <img mat-card-image src="data:image/jpeg;base64,{{img.url}}" height= "300px" alt="Photo of a Shiba Inu">
+        <mat-card-content>
+          <p>
+           {{img.description}}
+          </p>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-raised-button color="primary" (click)="updateText(img.id)">Update Text</button>
+          <button mat-raised-button style="float: right" color="primary" (click)="updateImage(img.id)">Update Image</button>
+        </mat-card-actions>
+      </mat-card>
+  </div>
+</ng-container>
+<ng-template #loading>
+  <div class="centered"><h1>Loading Data</h1></div>
+</ng-template>
